@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Assignment IMS456</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="image/logo 2.webp" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>University Technology Mara (UiTM)</p>
+            <h1>Hi, I'm <span>Farah</span> From</span><br>Class D1IM2452B</h1>
+        </div>
+    </div> 
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/9.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Farah Farhana Binti Yahaya. I was born on 10 May 2002 and live in Pendang, Kedah. My father's name is Yahaya Bin Shaik Saleh and he is working as an Immigration Officer. My mother's name is Zaiton Binti Saad and she is a teacher. I have 5 sibling and I'm a middle child. My hobby is reading which recently I was super into online fantasy comic. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Soft Skills</span><br>Good at communicate with people<br>Can work in a group<br>Can be the decision maker</li>
+                        <li><span>Hard Skills</span><br>Can speak foreign language<br>Have computer software knowledge<br>Active in sport</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Sekolah Menengah Kebangsaan Tanah Merah</span><br>2018-2019<br>4A 2B</li>
+                        <li><span>Kolej Matrikulasi Kedah</span><br>2020-2022<br>3.17</li>
+                        <li><span>UiTM Machang, Kelantan</span><br>2022-Current<br>-</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2016-2018</span><br>Store Keeper at SMK Tunku Temenggung</li>
+                        <li><span>2022</span><br>Store Keeper at SK Tengku Intan Syafinaz</li>
+                        <li><span>2020,2022-2023</span><br>Netball Coach at SK Tengku Intan Syafinaz</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Gallery</h1>
+        <div class="picture-list">
+            <div class="picture">
+                <img src="image/4.jpg">
+                <div class="layer">
+                    <h3>SAF 2023</h3>
+                    <p>Solo picture at Closing of SAF 2023 which happen on 13 June 2023 at Sport complex in UiTM Machang</p>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="image/7.jpg">
+                <div class="layer">
+                    <h3>SAF 2023</h3>
+                    <p>Group picture at Closing of SAF 2023</p>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="image/8.jpg">
+                <div class="layer">
+                    <h3>Trip</h3>
+                    <p>Trip with my friends to Pantai Cahaya Bulan In Kelantan</p>
+                </div>
+            </div>
+        </div>
+        <a href="gallery.html" class="btn">See more</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><a>2022697938@student.uitm.edu.my</a></p>
+                <p><a href="https://wa.link/20fizs">019-5790102</a></p>
+                <p><a href="https://instagram.com/yhana_._?igshid=MzNlNGNkZWQ4Mg==">Instagram : yhana_._</a></p>
+                <p><a href="https://www.facebook.com/farah.hana.1213986?mibextid=ZbWKwL">Facebook : Farah Hana</a></p>
+                <p><a href="https://twitter.com/MRaguya?t=m64qMHaDhpXUsZKrg7yfYA&s=09">Twitter : MRaguya</a></p>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder= "Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Farah. Individual Assignment IMS456</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbxqdRB4n97GI6ttDEFGLZ61iiZDcVfd59ZPL3z2wnqYOU_lF1b6McN4gg2bwcBrosML2Q/exec>'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
